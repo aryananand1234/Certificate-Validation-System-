@@ -1,0 +1,67 @@
+pragma solidity ^0.5.0;
+
+contract cert {
+    struct college {
+        string colname;
+        bool value;
+    }
+
+    struct cert_details {
+        string fname;
+        string lname;
+        string course;
+    }
+
+    mapping(address => cert_details) private certificates;
+    mapping(address => college) private colleges;
+
+    address private owner;
+
+    constructor() public {
+        owner = msg.sender;
+    }
+
+    modifier ownerOnly {
+        require(owner == msg.sender, "Caller is not the contract owner");
+        _;
+    }
+
+    event CollegeAdded(address indexed collegeAddress, string name);
+    event CertificateAdded(address indexed student, string fname, string lname, string course);
+
+    function addCollege(address coladd, string memory name) public ownerOnly {
+        require(coladd != address(0), "Invalid college address");
+        colleges[coladd] = college(name, true);
+        emit CollegeAdded(coladd, name);
+    }
+
+    function checkcoll(address col) public view returns (bool) {
+        return colleges[col].value;
+    }
+
+    function addcert(
+        address student,
+        string memory lname,
+        string memory fname,
+        string memory course
+    ) public {
+        require(student != address(0), "Invalid student address");
+        require(checkcoll(msg.sender), "Caller is not an approved college");
+        certificates[student] = cert_details(fname, lname, course);
+        emit CertificateAdded(student, fname, lname, course);
+    }
+
+    function viewcert(address student)
+        public
+        view
+        returns (
+            string memory fname,
+            string memory lname,
+            string memory course
+        )
+    {
+        cert_details memory details = certificates[student];
+        require(bytes(details.fname).length != 0, "Certificate not found");
+        return (details.fname, details.lname, details.course);
+    }
+}
