@@ -34,23 +34,6 @@ And replace the address value in **[src/config.js](src/config.js)** with your co
 2. **Verifying a certificate:** Go to *View Certificate*, enter the same student wallet address, and the dApp will pull the stored first name, last name, and course from the blockchain. Click *Print / Save* after a successful lookup to export a shareable confirmation.
 3. **Managing colleges:** Open *Manage Colleges*, connect with the wallet that deployed the contract, and call `addCollege` without leaving the UI. The page includes a log of the most recent college additions fetched from on-chain events for easy auditing.
 
----
-
-## 📸 Project Screenshots
-
-### Landing Page
-![Landing Page](screenshots/landing-page.png)
-*Modern landing page with hero section, feature showcase, and wallet integration*
-
-### Features Overview
-![Features](screenshots/features.png)
-*Role-based dashboards for admins, colleges, and certificate verification*
-
-### Wallet Connection
-![Wallet Connect](screenshots/wallet-connect.png)
-*MetaMask integration with network switching and account management*
-
----
 
 In the project directory, you can run:
 
