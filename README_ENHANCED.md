@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎓 Certificate Validation System - Enhanced Edition
 
 A modern, production-ready blockchain-based certificate validation platform built with React, Solidity, and Web3. Features role-based access control, certificate revocation, QR code verification, and responsive design.
@@ -663,5 +662,4 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ using React, Solidity, and Web3**
->>>>>>> f6314f5 (Initial commit: Certificate Validation System with blockchain integration)
+**Built with ❤️using React, Solidity, and Web3**
