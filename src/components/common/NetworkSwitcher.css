@@ -1,0 +1,46 @@
+.network-switcher {
+  border-left: 4px solid #f0ad4e;
+  background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.network-switcher .alert-heading {
+  color: #856404;
+  margin-bottom: 0.5rem;
+}
+
+.network-switcher p {
+  color: #533f03;
+  font-size: 0.9rem;
+}
+
+.network-switcher .btn-warning {
+  background: #f0ad4e;
+  border: none;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.network-switcher .btn-warning:hover:not(:disabled) {
+  background: #ec971f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.network-switcher .btn-warning:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

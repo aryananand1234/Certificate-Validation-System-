@@ -1,0 +1,45 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.account-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  color: #1f2d3d;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-primary:hover {
+  background-color: #764ba2;
+  border-color: #764ba2;
+}
+
+.feed-card {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.feed-card .list-group-item {
+  background-color: transparent;
+}
+
+.account-info .badge {
+  font-size: 0.75rem;
+  background-color: rgba(102, 126, 234, 0.2);
+}

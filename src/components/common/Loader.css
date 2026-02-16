@@ -1,0 +1,32 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loader-fullpage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-spinner {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.loader-text {
+  margin-top: 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

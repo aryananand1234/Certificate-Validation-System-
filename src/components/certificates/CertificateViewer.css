@@ -1,0 +1,225 @@
+/* Certificate Viewer Styles */
+.certificate-viewer-container {
+  padding: 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.search-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeInDown 0.4s ease-out;
+}
+
+.search-card .card-title {
+  color: #2d3748;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.certificate-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  animation: fadeInUp 0.5s ease-out;
+  overflow: hidden;
+}
+
+.certificate-card.revoked {
+  border: 3px solid #f56565;
+}
+
+.certificate-card .card-header {
+  padding: 1.25rem 1.5rem;
+  border: none;
+}
+
+.certificate-card .card-body {
+  padding: 2rem 1.5rem;
+}
+
+.student-name {
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.course-name {
+  color: #667eea;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.info-row {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #718096;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #2d3748;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.info-value code {
+  background: #f7fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #667eea;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.action-buttons button {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.qr-preview {
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.qr-preview canvas {
+  border-radius: 8px;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-header .close {
+  color: white;
+  opacity: 0.8;
+  text-shadow: none;
+}
+
+.modal-header .close:hover {
+  opacity: 1;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.modal-body {
+  padding: 2rem 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #e2e8f0;
+  padding: 1rem 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-viewer-container {
+    padding: 1rem;
+  }
+
+  .student-name {
+    font-size: 1.5rem;
+  }
+
+  .course-name {
+    font-size: 1.1rem;
+  }
+
+  .qr-preview {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .qr-preview canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  .info-label, .info-value {
+    font-size: 0.85rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .certificate-card .card-header,
+  .action-buttons,
+  .search-card {
+    display: none !important;
+  }
+
+  .certificate-card {
+    box-shadow: none;
+    border: 2px solid #2d3748;
+  }
+}
