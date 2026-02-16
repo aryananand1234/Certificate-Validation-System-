@@ -2,6 +2,17 @@
 
 A modern blockchain-based certificate validation platform built with React, Solidity, and Web3. Features role-based access control, certificate revocation, QR code verification, and responsive design.
 
+## 📸 Screenshots
+
+### Home Landing Page
+![Home Landing Page](Screenshots/home-landing.png.png)
+
+### Wallet Connection
+![Wallet Connect](Screenshots/wallet-connect.png.png)
+
+### Blockchain Features
+![Blockchain Features](Screenshots/blockchain-features.png.png)
+
 ## ✨ Features
 
 ### 🔐 Security & Access Control
